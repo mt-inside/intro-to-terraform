@@ -1,0 +1,11 @@
+#cloud-config
+users:
+  - name: default
+    ssh_authorized_keys:
+      - ${file("~/.ssh/google_compute_engine.pub")}
+packages:
+  - nginx
+write_files:
+  - path: /var/www/html/index.html
+    content: |
+      Welcome to AWS!
