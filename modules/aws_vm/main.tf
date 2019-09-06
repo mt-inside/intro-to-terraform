@@ -1,5 +1,3 @@
-#is a cloud-init data or functino?
-
 data "aws_ami" "ubuntu" {
   most_recent = true
 
