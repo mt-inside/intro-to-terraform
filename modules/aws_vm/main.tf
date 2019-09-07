@@ -1,11 +1,9 @@
 data "aws_ami" "ubuntu" {
-  most_recent = true
-
   owners = ["099720109477"] # Cannonical
 
   filter {
     name = "name"
-    # Ubuntu image names have a long path prexix; most don't
+    # Ubuntu image names have a long path prefix; most don't
     values = ["*ubuntu-bionic-18.04-*"]
   }
 
@@ -28,6 +26,8 @@ data "aws_ami" "ubuntu" {
     name   = "root-device-type"
     values = ["ebs"]
   }
+
+  most_recent = true
 }
 
 resource "aws_instance" "main" {
