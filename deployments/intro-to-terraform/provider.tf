@@ -7,10 +7,9 @@ provider "google" {
 }
 
 provider "cloudflare" {
-  version = "~> 1"
+  version = "~> 2"
 
-  email = "matt.turner.wrk@gmail.com"
-  token = var.cf_api_token
+  api_token = var.cf_api_token
 }
 
 provider "aws" {
