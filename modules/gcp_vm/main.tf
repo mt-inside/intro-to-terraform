@@ -1,10 +1,15 @@
+data "google_compute_image" "deb10" {
+  project = "debian-cloud"
+  family  = "debian-10"
+}
+
 resource "google_compute_instance" "main" {
   name         = var.name
   machine_type = "f1-micro"
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-10"
+      image = data.google_compute_image.deb10.self_link
     }
   }
 
