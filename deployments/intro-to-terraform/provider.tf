@@ -9,6 +9,10 @@ provider "google" {
 provider "cloudflare" {
   version = "~> 2.3"
 
+  # Needs:
+  # * zone.zone (?)
+  # * zone.zone settings (?)
+  # * zone.dns
   api_token = var.cf_api_token
 }
 
