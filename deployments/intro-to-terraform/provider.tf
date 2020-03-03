@@ -1,5 +1,5 @@
 provider "google" {
-  version = "~> 2"
+  version = "~> 3.11"
 
   project = var.gcp_project_id
   region  = "europe-west1"
@@ -7,13 +7,13 @@ provider "google" {
 }
 
 provider "cloudflare" {
-  version = "~> 2"
+  version = "~> 2.3"
 
   api_token = var.cf_api_token
 }
 
 provider "aws" {
-  version = "~> 2"
+  version = "~> 2.51"
 
   region = "eu-west-1"
 }
