@@ -2,8 +2,8 @@ provider "google" {
   version = "~> 3.11"
 
   project = var.gcp_project_id
-  region  = "europe-west1"
-  zone    = "europe-west1-b"
+  region  = "europe-west2"
+  zone    = "europe-west2-b"
 }
 
 provider "cloudflare" {
