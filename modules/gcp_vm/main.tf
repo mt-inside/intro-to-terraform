@@ -27,7 +27,7 @@ resource "google_compute_instance" "main" {
 
   provisioner "remote-exec" {
     connection {
-      host        = google_compute_instance.main.network_interface[0].access_config[0].nat_ip
+      host        = self.network_interface[0].access_config[0].nat_ip
       user        = "user"
       private_key = file("~/.ssh/google_compute_engine")
     }
